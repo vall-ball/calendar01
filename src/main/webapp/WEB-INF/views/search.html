@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Поиск события в календаре</title>
+</head>
+<body>
+<div><h1>Поиск события в календаре</h1></div>
+
+<form action="#" th:action="@{/search}" method="post">
+	 <p><b>Введите ключевые слова</b></p>
+  	 <p><input type="text" name="str"></p>
+  	 <p><button type="submit" value="Submit">Искать</button>  </p>
+  </form>
+
+</body>
+</html>

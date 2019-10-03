@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Результаты поиска по ключевому слову</title>
+</head>
+<body>
+<div><h1>Результаты поиска по ключевому слову <span th:text="${key}"></h1></div>
+
+<p th:each="ev : ${events}">
+ 			<a th:href="@{/update/{id}(id=${ev.id})}" th:text="${ev}"></a>
+ 			</p>
+
+</body>
+</html>

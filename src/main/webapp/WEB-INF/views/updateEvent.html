@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Изменение события в календаре</title>
+</head>
+<body>
+<div><h1>Изменение события в календаре.</h1></div>
+
+<form action="#" th:action="@{/updateEvent}" method="post">
+	 <p th:text="${eventForChange.date}"></p>
+	 <p><b>Введите название события</b></p>
+  	 <p><input type="text" th:value="${eventForChange.name}" name="name"></p>
+  	 <p><b>Введите описание</b></p>
+  	 <p><input type="text" th:value="${eventForChange.description}" name="description"></p>
+  	 <div th:object="${listTime}">
+    	<select name="time">
+        <option value="">Выберите время</option>
+        <option th:each="t : ${listTime}"
+                th:value="${t}"
+                th:text="${t}"></option>
+    	</select>
+	 </div>
+	 
+  	 <p><button type="submit" value="Submit">Изменить событие</button>  </p>
+  </form>
+
+</body>
+</html>
